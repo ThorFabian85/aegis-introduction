@@ -1,11 +1,5 @@
-# Introducing Aegis — v2.4 Asking AI Fix
+# Introducing Aegis — Reversent
 
-This pass changes only the “Asking AI” section.
+Final clean version. Text-only hero, no front image. The two book covers remain in the Reversent Library section with their downloadable PDFs.
 
-The four dialogue turns now exactly follow `Asking AI.docx`:
-1. Thor — initial question
-2. ChatGPT — first answer
-3. Thor — follow-up confirming the core point
-4. ChatGPT — final response
-
-Everything else is retained from v2.3.
+Upload all files in this folder to the GitHub Pages repository root.
