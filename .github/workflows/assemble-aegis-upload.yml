@@ -1,0 +1,19 @@
+name: Assemble Aegis site upload
+on:
+  push:
+    branches: [upload-aegis-introduction-20260914]
+    paths: [.aegis-upload/READY]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Reassemble and verify original site files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python .aegis-upload/assemble.py
