@@ -1,0 +1,34 @@
+/* Only the visitor removes this coating. The revealed face is black and white neon. */
+.scratch-scene{width:min(440px,100%);margin:30px auto 0}
+.scratch-stage{position:relative;width:100%;isolation:isolate;-webkit-mask-image:linear-gradient(#000 89%,transparent);mask-image:linear-gradient(#000 89%,transparent)}
+.scratch-robot{display:block;width:100%;height:auto;user-select:none;pointer-events:none}
+.scratch-face{position:absolute;left:8.026316%;top:28.468900%;width:46.052632%;height:35.645933%;isolation:isolate;clip-path:polygon(0.857% 16.107%,7.714% 12.081%,16.000% 8.054%,24.286% 4.698%,33.714% 2.237%,42.571% 0.895%,51.429% 0.671%,60.286% 1.119%,69.714% 2.908%,78.571% 5.817%,86.571% 8.949%,97.429% 13.647%,97.714% 24.161%,98.571% 37.136%,99.429% 50.112%,99.143% 61.074%,97.429% 71.141%,94.571% 77.852%,89.429% 83.445%,81.714% 88.143%,73.143% 91.946%,62.857% 95.526%,50.286% 99.105%,38.000% 95.526%,26.000% 91.723%,16.000% 87.696%,9.143% 82.774%,4.286% 76.286%,1.714% 68.456%,0.286% 58.389%,0.286% 47.651%,0.571% 36.465%,0.857% 26.398%)}
+.scratch-reveal{position:absolute;inset:0;background:#000}
+.scratch-inscription{position:absolute;inset:23% 12% 15%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8%}
+.scratch-inscription img{display:block;width:67%;height:auto;max-height:62%;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 0 3px #fff) drop-shadow(0 0 9px #ffffffc9) drop-shadow(0 0 17px #ffffff7a)}
+.scratch-inscription span{font:500 clamp(21px,3.1vw,33px)/1 var(--sans,Arial,sans-serif);letter-spacing:.15em;color:#fff;padding-left:.15em;text-shadow:0 0 4px #fff,0 0 11px #ffffffd9,0 0 24px #ffffff80}
+.scratch-paint{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;touch-action:none}
+.scratch-paint:focus-visible{outline:2px solid #fff;outline-offset:-3px}
+.scratch-scene.is-scratching .scratch-paint{cursor:grabbing}
+.scratch-cursor{position:absolute;left:50%;top:50%;width:7.5%;aspect-ratio:1;border:1px solid #fff;border-radius:50%;box-shadow:0 0 0 1px #000;transform:translate(-50%,-50%);pointer-events:none;opacity:0}
+.scratch-paint:focus-visible+.scratch-cursor{opacity:1}
+/* A viewport-sized world stays behind the essay as the reader enters the ship. */
+.why-aegis.voyage-section{position:relative;isolation:isolate;padding:90px 0 110px;overflow:clip;background:#0b1913}
+.voyage-environment{position:absolute;inset:0;z-index:0;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 90px,#000 calc(100% - 110px),transparent);mask-image:linear-gradient(transparent,#000 90px,#000 calc(100% - 110px),transparent)}
+.voyage-window{position:sticky;top:0;width:100%;height:100vh;height:100svh;overflow:hidden;isolation:isolate}
+.voyage-cosmos{position:absolute;inset:0;z-index:0;opacity:0}
+.voyage-cosmos>img{display:block;width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+.cockpit-scene{position:absolute;inset:0;z-index:1;margin:0;pointer-events:none}
+.cockpit-stage{position:absolute;inset:0;isolation:isolate;overflow:hidden;opacity:0;background:#010610}
+.cockpit-planet{position:absolute;inset:-5%;width:110%;height:110%;max-width:none;object-fit:cover;z-index:0;pointer-events:none;user-select:none}
+.cockpit-frame{position:absolute;inset:-2%;width:104%;height:104%;max-width:none;object-fit:cover;z-index:2;pointer-events:none;user-select:none}
+.voyage-reading-veil{position:absolute;inset:0;z-index:2;opacity:0;background:linear-gradient(90deg,#03091620,#03091638 32%,#030916dd 52%,#030916ed)}
+.voyage-content{position:relative;z-index:1}
+.voyage-dwell{height:0;pointer-events:none}
+.voyage-section.has-voyage .voyage-dwell{height:150vh;height:150svh}
+.why-aegis-aside{min-width:0;min-height:70vh;min-height:70svh}
+.voyage-section .why-aegis-title{text-shadow:0 2px 16px #02070cee}
+.voyage-section .prose{color:#e0e7e5;text-shadow:0 1px 3px #000}
+@media(max-width:1000px){.scratch-scene{width:min(380px,100%)}.voyage-section .editorial-grid{gap:44px}}
+@media(max-width:700px){.scratch-scene{width:min(360px,100%);margin-top:28px}.scratch-inscription span{font-size:clamp(19px,6.5vw,30px)}.why-aegis.voyage-section{padding:55px 0 65px}.voyage-environment{-webkit-mask-image:linear-gradient(transparent,#000 55px,#000 calc(100% - 65px),transparent);mask-image:linear-gradient(transparent,#000 55px,#000 calc(100% - 65px),transparent)}.voyage-cosmos>img{object-position:40% 50%}.voyage-reading-veil{background:linear-gradient(#03091699,#03091622 24%,#03091622 62%,#03091688)}.why-aegis-aside{min-height:calc(100vh - 100px);min-height:calc(100svh - 100px)}.voyage-section .editorial-grid{gap:28px}.voyage-section .prose{background:#030916e8;padding:24px 18px;margin:0 -18px;border-radius:8px}}
+@media print{.scratch-scene,.voyage-environment,.voyage-dwell{display:none!important}.why-aegis.voyage-section{background:white!important;padding:30px 0}.why-aegis-aside{min-height:0}.voyage-section .prose{background:transparent!important;padding:0;margin:0}}

@@ -1,0 +1,133 @@
+/* A small interruption in a very long history of philosophy. */
+.philosophy .large-aside{min-width:0}
+.socrates-scene{position:relative;height:500px;margin:12px 0 0;isolation:isolate;background:transparent}
+.socrates-actor{position:absolute;bottom:30px;left:50%;width:min(320px,100%);aspect-ratio:2/3;transform:translateX(-50%);padding:0;border:0;border-radius:0;background:transparent;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.socrates-actor:disabled{cursor:default}
+.socrates-actor.is-dragging{cursor:grabbing}
+.socrates-actor:focus-visible{outline:none;filter:brightness(1.18)}
+.socrates-viewport{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;transform-origin:50% 90%;transition:transform .35s ease}
+.is-dragging .socrates-viewport{transition:none}
+.socrates-atlas{position:absolute;top:0;left:0;width:400%!important;height:200%!important;max-width:none!important;pointer-events:none;user-select:none;-webkit-user-drag:none;object-fit:fill}
+.socrates-response{position:absolute;top:16px;left:5%;width:90%;margin:0!important;text-align:center;font:12px/1.65 var(--mono)!important;letter-spacing:0!important;color:#c4d4c9;pointer-events:none}
+.socrates-response:empty{display:none}
+.socrates-caption{position:absolute;bottom:0;left:0;right:0;text-align:center;font:8px/1.6 var(--mono);letter-spacing:.14em;color:#729481}
+.socrates-actor.is-departing{position:fixed;left:0;top:0;bottom:auto;margin:0;z-index:60;transform:none;pointer-events:none;cursor:default}
+
+/* The rain spans the whole dialogue chapter. Its text sits on a quiet veil. */
+.dialogue-section{position:relative;isolation:isolate;background:#04120d}
+.matrix-field{position:absolute;inset:0;overflow:clip;z-index:-2;pointer-events:none}
+.matrix-field canvas{position:sticky;top:0;display:block;width:100%;height:100vh;opacity:.72}
+.matrix-veil{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#04120d24,#04120d70 17%,#04120dba 38%,#04120d8c 73%,#04120d20),linear-gradient(#07120f88,transparent 15%,transparent 85%,#07120fbf)}
+.dialogue-section>.wrap{position:relative}
+.dialogue-section .section-heading{position:relative;padding-right:46px}
+.dialogue-section .section-heading h2,.dialogue-section .section-deck,.dialogue-section .reader-aside{text-shadow:0 2px 18px #03110eff}
+.dialogue-section .reader-shell{background:#06100cf2;backdrop-filter:blur(8px)}
+.rain-toggle{position:absolute;top:0;right:0;width:34px;height:34px;border:1px solid #a2e7c044;border-radius:50%;background:#05130dbb;font:12px var(--mono);color:var(--accent)}
+.rain-toggle:hover{border-color:var(--accent)}
+
+/* The film and the composition share a quiet screening room. */
+.safeguard-section{padding:115px 0 125px;background:#07110f;border-top:1px solid var(--line)}
+.safeguard-heading{display:flex;justify-content:space-between;gap:40px;align-items:flex-end;margin-bottom:48px}
+.safeguard-heading h2{font-size:clamp(45px,5.5vw,82px)}
+.safeguard-heading>p{color:var(--muted);font-size:18px;max-width:270px;padding-bottom:5px}
+.film-frame{background:#000;box-shadow:0 30px 85px #0005;border:1px solid #809b8b26}
+.film-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#000}
+.film-caption{display:flex;justify-content:space-between;gap:16px;margin-top:17px;font:9px/1.5 var(--mono);letter-spacing:.11em;color:#85a394}
+.piano-section{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center;border-top:1px solid var(--line);padding-top:70px;margin-top:80px}
+.piano-copy h3{font-size:clamp(31px,3.8vw,49px);line-height:1.12;margin:22px 0}
+.piano-copy>p{font-size:19px;line-height:1.55;color:#c3d2c8}
+.composer-credit{display:block;font:10px/1.7 var(--mono);color:var(--muted);margin-top:25px}
+.piano-player{min-width:0}
+.piano-wave{height:100px;display:flex;align-items:center;justify-content:center;gap:5px;margin-bottom:25px;overflow:hidden}
+.piano-wave i{width:3px;height:var(--height);background:linear-gradient(#c4eed7,#557e66);opacity:.4;border-radius:2px;transform:scaleY(.55)}
+.is-playing .piano-wave i{animation:piano-pulse 1.2s calc(var(--bar)*-.13s) ease-in-out infinite alternate;opacity:.8}
+.piano-play{width:100%;justify-content:space-between;font-size:14px;margin-bottom:17px}
+.piano-player audio{display:block;width:100%;height:44px;accent-color:var(--accent);color-scheme:dark}
+.piano-links{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 20px;margin-top:18px}
+.piano-downloads{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
+.piano-links>span{font:8px/1.7 var(--mono);letter-spacing:.05em;color:var(--muted)}
+.piano-links .text-link{font-size:12px;white-space:nowrap}
+.media-status{min-height:1.5em;margin-top:12px;font-size:12px;color:var(--muted)}
+@keyframes piano-pulse{to{transform:scaleY(1)}}
+
+/* The final chapter, network and footer all remain on paper white. */
+.white-finale{--bg:#faf9f6;--ink:#17201d;--muted:#616965;--accent:#aa343a;--line:#24372d26;background:var(--bg);color:var(--ink);color-scheme:light}
+.original-book-section{padding-top:120px;padding-bottom:110px}
+.original-book-intro{margin-bottom:60px}
+.original-book-intro h2{font-size:clamp(45px,6.2vw,87px);line-height:1.06;letter-spacing:-.05em}
+.original-book-intro h2 em{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.04em}
+.original-book-intro>p{font-size:18px;color:var(--muted);margin-top:24px}
+.original-book-grid{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:80px}
+.original-book-figure{margin:0}
+.original-book-figure img{display:block;width:100%;height:auto;box-shadow:0 28px 50px #171d1814}
+.original-book-copy h3{font-size:clamp(44px,5vw,68px);line-height:.98;margin:25px 0 22px;letter-spacing:-.045em}
+.original-book-copy h3>span{display:block;font-size:.57em;font-weight:400;color:var(--accent);margin-top:13px;letter-spacing:-.02em}
+.original-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:1.5}
+.original-book-copy>p:not(.original-subtitle){color:var(--muted);font-size:15px;line-height:1.8;margin-top:24px}
+.white-finale .button.primary{background:#192821;color:#fff;border-color:#192821}
+.original-book-copy .button{margin-top:32px;gap:28px}
+.original-book-meta{display:block;margin-top:15px;font:9px/1.7 var(--mono);letter-spacing:.04em;color:var(--muted)}
+.cover-download{margin-top:18px;font-size:12px}
+.white-finale .network-section{background:#faf9f6;border-color:var(--line)}
+.white-finale .network-heading h2 .accent{color:#17201d}
+.white-finale .network-link span,.white-finale .contact,.white-finale .footer>span{color:var(--muted)}
+.white-finale .footer{border-color:var(--line)}
+.white-finale .footer p{color:var(--muted)}
+.white-finale ::selection{background:#cfdcd4;color:#17201d}
+body.light-chapter{background:#faf9f6}
+.light-chapter .site-header{--ink:#17201d;--muted:#616965;--accent:#314e40;--line:#24372d26;color:var(--ink);background:#faf9f6f5;border-color:#24372d26;color-scheme:light}
+.light-chapter .site-header .brand small{color:#616965;border-color:#24372d26}
+.light-chapter .site-header .network-pill{border-color:#314e4070}
+.light-chapter .site-header nav a:hover{color:#314e40}
+
+@media(max-width:1000px){.socrates-scene{height:440px}.socrates-actor{width:min(280px,100%)}.safeguard-section{padding-block:90px}.piano-section{gap:45px}.original-book-grid{gap:40px}.original-book-section{padding-block:90px}.original-subtitle{font-size:20px}}
+@media(max-width:700px){.socrates-scene{height:450px;max-width:350px;margin:10px auto 0}.socrates-actor{width:280px}.socrates-response{font-size:11px!important;top:12px}.safeguard-section{padding-block:70px}.safeguard-heading{display:block;margin-bottom:30px}.safeguard-heading>p{margin-top:22px;font-size:16px}.film-caption{font-size:7px}.piano-section{grid-template-columns:1fr;gap:24px;margin-top:50px;padding-top:40px}.piano-copy h3{font-size:40px}.piano-copy>p{font-size:18px}.piano-wave{height:80px;margin-bottom:20px}.piano-links{gap:12px}.piano-links>span{font-size:7px}.piano-links .text-link{font-size:11px}.original-book-section{padding-block:70px}.original-book-intro{margin-bottom:36px}.original-book-intro h2{font-size:clamp(41px,9vw,61px)}.original-book-grid{grid-template-columns:1fr;gap:42px}.original-book-copy h3{font-size:55px}.original-book-copy .button{width:100%;justify-content:space-between;font-size:12px;gap:14px}.matrix-veil{background:linear-gradient(90deg,#04120d80,#04120db5 48%,#04120d65),linear-gradient(#07120f88,transparent 15%,transparent 85%,#07120fbf)}}
+@media(prefers-reduced-motion:reduce){.socrates-viewport{transition:none}.is-playing .piano-wave i{animation:none}.piano-wave i{transform:scaleY(.8)}}
+@media print{.socrates-scene,.matrix-field,.matrix-veil,.rain-toggle,.film-frame,.piano-player{display:none!important}.safeguard-section,.white-finale{background:white;color:#17201d}.safeguard-section,.original-book-section{padding-block:35px}.original-book-grid{grid-template-columns:1fr 1fr;gap:30px}.piano-section{margin-top:30px;padding-top:30px}.piano-copy>p,.safeguard-heading>p{color:#354c40}.original-book-figure img{box-shadow:none}}
+
+/* The invitation stays with the empty seat, even after a return visit. */
+.socrates-return{position:absolute;left:50%;bottom:125px;transform:translateX(-50%);white-space:nowrap;font-size:12px;gap:22px;background:#0a1b14;border-color:#9fd6b94d}
+.socrates-return:hover{background:#132c20;border-color:#a2e7c0}
+.socrates-actor.is-returning{animation:socrates-returns .65s ease-out both}
+@keyframes socrates-returns{from{opacity:0}to{opacity:1}}
+
+/* One continuous landscape: every chapter reaches the next chapter's color. */
+main{background:#07120f}
+.dialogue-section{border-block:0;background:linear-gradient(#07120f,#04120d 180px,#04120d calc(100% - 180px),#07120f)}
+.matrix-field,.matrix-veil{-webkit-mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 180px),transparent);mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 180px),transparent)}
+.practice-section{border-block:0;background:linear-gradient(#07120f,#0b1913 180px,#0b1913 calc(100% - 180px),#07120f)}
+.world-section{background:linear-gradient(#07120f,#071423 240px,#06101d 75%,#07120f)}
+.safeguard-section{border-top:0;background:linear-gradient(#07120f,#07110f 180px)}
+.white-finale#white-finale{border-top:1px solid #d1d5d0}
+
+/* A photograph slowly emerges behind the essay, with room to travel. */
+.future-section{position:relative;isolation:isolate;background:#07120f;padding-bottom:48px}
+.future-reading-section{position:relative;background:#07120f;padding-bottom:110px}
+.cosmic-field,.cosmic-flight-field{position:absolute;inset:0;pointer-events:none;overflow:clip;-webkit-mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 180px),transparent);mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 180px),transparent)}
+.cosmic-field{z-index:-3;opacity:0}
+.cosmic-window,.cosmic-flight-window{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.cosmic-universe{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 45%;transform:scale(1.045);filter:saturate(.85)}
+.cosmic-flight-field{z-index:-2}
+.cosmic-traveler{position:absolute;left:0;top:26%;width:clamp(240px,34vw,520px);aspect-ratio:1983/793;will-change:transform;filter:drop-shadow(0 0 12px #b1d9f633)}
+.cosmic-traveler img{position:relative;display:block;width:100%;height:auto;max-width:none;z-index:1}
+.rocket-exhaust{position:absolute;left:60.5%;top:22%;width:50%;height:9%;transform-origin:0 50%;background:linear-gradient(90deg,#fffbd7,#fff1a4 12%,#ffbe3970 40%,#e9980e00);clip-path:polygon(0 0,100% 50%,0 100%);filter:blur(2px);z-index:0}
+.cosmic-veil{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#03100c1a,#03100c28 32%,#03100ccc 54%,#03100cba 82%,#03100c45);-webkit-mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 180px),transparent);mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 180px),transparent)}
+.cosmic-content{position:relative}
+.cosmic-content .section-heading{padding-right:44px}
+.cosmic-content h2,.cosmic-content .future-aside,.cosmic-content .prose,.cosmic-content summary,.cosmic-content .eyebrow{text-shadow:0 1px 3px #03110e,0 0 15px #03110e}
+.cosmic-toggle{position:absolute;top:0;right:0;width:34px;height:34px;border:1px solid #a2e7c044;border-radius:50%;background:#05130daa;font:12px var(--mono);color:var(--accent)}
+.cosmic-toggle:hover{border-color:var(--accent)}
+@media(max-width:700px){.cosmic-traveler{width:clamp(210px,57vw,330px);top:22%}.cosmic-veil{background:linear-gradient(90deg,#03100c99,#03100c9c 80%,#03100c66)}.cosmic-content .section-heading{padding-right:38px}.world-section{background:linear-gradient(#07120f,#071423 180px,#06101d 75%,#07120f)}}
+@media(prefers-reduced-motion:reduce){.socrates-actor.is-returning{animation:none}.cosmic-field{opacity:1}.cosmic-universe{transform:none}.cosmic-traveler{display:none!important}}
+@media print{.cosmic-field,.cosmic-veil,.cosmic-flight-field,.cosmic-toggle,.paper-transition{display:none!important}.future-section,main{background:white!important}}
+
+.cosmic-content .section-heading{padding-right:0}
+.cosmic-content .section-number{padding-right:44px;min-height:34px}
+.business-title{font-size:24px;line-height:1.3;margin:0 0 24px;font-weight:400;letter-spacing:-.03em}
+.why-aegis{padding:54px 0 62px}
+.why-aegis-title{font-size:clamp(28px,3vw,42px);line-height:1.15;font-weight:400;letter-spacing:-.04em;max-width:390px}
+.why-aegis .prose ul{padding-left:22px;margin:24px 0}
+.why-aegis .prose li{padding-left:6px;margin:0 0 18px}
+.ai-heading{font-size:22px;line-height:1.3;font-weight:400;letter-spacing:-.02em;margin:12px 0 24px}
+@media(max-width:700px){.future-reading-section{padding-bottom:65px}.future-section{padding-bottom:30px}.why-aegis{padding:30px 0 38px}.why-aegis .editorial-grid{gap:24px}}
+@media print{.future-reading-section{background:white!important;padding-bottom:30px}}
