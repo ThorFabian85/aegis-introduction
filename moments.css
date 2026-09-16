@@ -25,7 +25,8 @@
 .voyage-reading-veil{position:absolute;inset:0;z-index:2;opacity:0;background:linear-gradient(90deg,#03091620,#03091638 32%,#030916dd 52%,#030916ed)}
 .voyage-content{position:relative;z-index:1}
 .voyage-dwell{height:0;pointer-events:none}
-.voyage-section.has-voyage .voyage-dwell{height:150vh;height:150svh}
+/* Reserve the cockpit's scroll space before lazy images load so anchor targets stay put. */
+.js .voyage-section .voyage-dwell{height:150vh;height:150svh}
 .why-aegis-aside{min-width:0;min-height:70vh;min-height:70svh}
 .voyage-section .why-aegis-title{text-shadow:0 2px 16px #02070cee}
 .voyage-section .prose{color:#e0e7e5;text-shadow:0 1px 3px #000}

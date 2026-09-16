@@ -122,7 +122,6 @@
     stage.style.opacity=cockpitReady()?String(still?1:smooth(cockpitTime/cockpitDuration)):'0';
     // The text moves with ordinary page scrolling; its reading shade leaves
     // with it. The extra section depth keeps the full cockpit behind us.
-    section.classList.toggle('has-voyage',cockpitReady());
     veil.style.opacity=String(readingOpacity*Math.max(Number(cosmos.style.opacity),Number(stage.style.opacity)));
     const x=still?0:viewX,y=still?0:viewY;
     // Restore two depths: the distant planet drifts behind the cleaned
